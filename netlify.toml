@@ -1,0 +1,11 @@
+# Configuration lue par Netlify a la racine du depot : elle prime sur le
+# reglage "Publish directory" de l'interface. Le site est dans deploy/.
+[build]
+  publish = "deploy"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
